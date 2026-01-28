@@ -5,6 +5,13 @@ def addTask():
     tasks.append(task)
     print(f"Task {task} added to the list")
 
+def listTasks():
+    if not tasks:
+        print("There are no tasks currently.")
+    else:
+        for index, task in enumerate(tasks):
+            print(f"Task #{index}. {task}") 
+
 def deleteTask():
     listTasks()
     try:
