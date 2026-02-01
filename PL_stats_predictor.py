@@ -5,10 +5,14 @@ from sklearn.linear_model import LinearRegression
 
 
 def load_data(path):
-    pass
+    # Read the data from the csv file
+    df = pd.read_csv(path)
+    return df
+    
 
 def process_stats(df):
-    pass
+    print("Columns available to us: ", df.columns.tolist())
+    return df
 
 def train_and_predict(features, targets):
     pass
@@ -20,4 +24,8 @@ def plot_likelihood(results):
 
 if __name__ == "__main__":
     print("Model Training Intialized...")
+    path = r"C:\Users\svyat\Downloads\E0 (1).csv"
+    df = load_data(path)
+
+    process_stats(df)
 
